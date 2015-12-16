@@ -5,18 +5,15 @@ dirStruct <- c("Coursera", "Getting Data", "Course Project")
 
 ## Determine based upon getwd() if R file is being run on a Windows machine or a Mac machine.
 ## Adjust file path accordingly.
-##windowsPath <- "P:\\R\\Coursera\\Getting Data\\Course Project"
-#windowsPath <- paste0("P:\\R", "\\", paste(dirStruct, collapse = "\\"))
-
-##macPath <- "/Users/Craig/Dropbox/R/Getting Data/Course Project"
-#macPath <- paste0("/Users/Craig/Dropbox/R", "/", paste(dirStruct, collapse = "/"))
 
 if (getwd() == "P:/R") {
     # R file is being used on Windows machine
+    ##windowsPath <- "P:\\R\\Coursera\\Getting Data\\Course Project"
     path <- paste0("P:\\R", "\\", paste(dirStruct, collapse = "\\"))
     seperator <- "\\"
 } else if (getwd() == "/Users/Craig/Dropbox/R") {
     # R file is being used on Mac machine
+    ##macPath <- "/Users/Craig/Dropbox/R/Getting Data/Course Project"
     path <- paste0("/Users/Craig/Dropbox/R", "/", paste(dirStruct, collapse = "/"))
     seperator <- "/"
 } else {
